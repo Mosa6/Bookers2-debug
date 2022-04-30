@@ -1,10 +1,10 @@
 class BookCommentsController < ApplicationController
   def create
-    p current_user
+    current_user
     book = Book.find(params[:book_id])
-    p comment = current_user.book_comments.new(book_comment_params)
+    comment = current_user.book_comments.new(book_comment_params)
     comment.book_id = book.id
-    comment.save!
+    comment.save
     redirect_to book_path(book)
   end
 
