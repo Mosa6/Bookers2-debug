@@ -15,7 +15,7 @@
           <td><%= @yesterday_book.count %></td>
           <td>
             <% if @yesterday_book.count == 0 %>
-              前日の投稿が0のため計算できません
+              前日の投稿が0のため算出できません
             <% else %>
               <% @the_day_before =   @today_book.count / @yesterday_book.count.to_f  %>
               <%= (@the_day_before * 100).round %>%
