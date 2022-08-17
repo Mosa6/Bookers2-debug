@@ -16,7 +16,6 @@ class BooksController < ApplicationController
       b.favorites.where(created_at: from...to).size <=>
       a.favorites.where(created_at: from...to).size
     }
-    
     @book = Book.new
     @user = @book.user
   end
