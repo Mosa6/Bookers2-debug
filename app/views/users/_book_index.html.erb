@@ -79,11 +79,10 @@
     </tbody>
   </table>
 
-  <canvas id="LineChart"></canvas>
-
+  <canvas id="myLineChart"></canvas>
   <script>
     $(document).on('turbolinks:load', function() {
-      var ctx = document.getElementById("LineChart");
+      var ctx = document.getElementById("myLineChart");
       var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -93,11 +92,11 @@
               label: '投稿した本の数',
               data: [
                 <%= @books.created_6day_ago.count %>,
-                <%= @books.created_5day_ago.count %>,
-                <%= @books.created_4day_ago.count %>,
-                <%= @books.created_3day_ago.count %>,
-                <%= @books.created_2day_ago.count %>,
-                <%= @books.created_yesterday.count %>,
+                <%= @books.created_5day_ago.count %>, 
+                <%= @books.created_4day_ago.count %>, 
+                <%= @books.created_3day_ago.count %>, 
+                <%= @books.created_2day_ago.count %>, 
+                <%= @books.created_yesterday.count %>, 
                 <%= @books.created_today.count %>
               ],
               borderColor: "rgba(0,0,255,1)",
@@ -125,3 +124,4 @@
       });
     });
   </script>
+
