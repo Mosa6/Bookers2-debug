@@ -36,7 +36,6 @@ class UsersController < ApplicationController
     render :daily_posts_form
   end
 
-
   private
 
   def user_params
